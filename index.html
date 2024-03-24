@@ -104,7 +104,7 @@
                     />
                   </svg>
                 </button>
-                <button class="card__like-button">
+                <button class="card__like-button button__click" type="button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -113,6 +113,19 @@
         </li>
       </ul>
     </main>
+    <footer class="footer footer_section">
+      <button
+        class="footer__button button__click"
+        type="button"
+        onclick="window['dialog'].showModal()"
+        aria-controls="dialog"
+      >
+        <svg class="footer__button-img" viewBox="0 0 39 39">
+          <use href="svg/floppy.svg#floppy" />
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
+    </footer>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

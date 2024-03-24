@@ -10,12 +10,14 @@
   --background-image: var(--background-image_light, #ffffff);
   --sparks-color: var(--sparks-color_light, #ff0000);
   --contur-color: var(--acent-color_light, #000000);
+  --botton_text-color: var(--botton_text-color_light, #ffffff);
 }
 
 :root.theme-dark {
   --background-color: var(--background-color_dark, #000000);
   --acent-color: var(--acent-color_dark, #00cc14);
   --background-image: var(--background-image_dark, #000000);
+  --botton_text-color: var(--botton_text-color_dark, #00cc14);
 }
 
 @media (prefers-color-scheme: light) {
@@ -23,6 +25,7 @@
     --background-color: var(--background-color_light, #ffffff);
     --acent-color: var(--acent-color_light, #000000);
     --background-image: var(--background-image_light, #ffffff);
+    --botton_text-color: var(--botton_text-color_light, #ffffff);
   }
 }
 
@@ -33,5 +36,6 @@
     --background-image: var(--background-image_dark, #000000);
     --sparks-color: var(--sparks-color_light, #ff0000);
     --contur-color: var(--acent-color_light, #000000);
+    --botton_text-color: var(--botton_text-color_dark, #00cc14);
   }
 }

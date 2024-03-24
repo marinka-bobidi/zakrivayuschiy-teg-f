@@ -6,7 +6,8 @@
   --weight_text: 400;
   --color_heart: #ff0000;
 
-  --background-color_light: #ffffff;
+  --botton_text-color_light: #ffff;
+  --background-color_light: #ffff;
   --acent-color_light: #000000;
   --background-image_light: repeating-linear-gradient(
       to left,
@@ -28,4 +29,5 @@
     repeating-linear-gradient(to bottom, #000000 0 2px, transparent 2px 4px),
     linear-gradient(to bottom, #007f0c, #004306);
   --contur-color_dark: var(--acent-color_dark, #00cc14);
+  --botton_text-color_dark: #00cc14;
 }

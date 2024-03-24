@@ -193,17 +193,70 @@
   align-items: stretch;
 }
 
-.card__like-button {
+.button__click {
   position: relative;
   cursor: pointer;
-  background: transparent;
-  border: 2px solid var(--acent-color, #000000);
   padding: 10px 36px;
+  transition: box-shadow 0.3s ease;
+  background-color: var(--background-color);
+  border: 2px solid var(--acent-color, #000000);
+  color: var(--acent-color);
+  font-family: var(--acent_font, "PressStart2P-Regular", fantasy);
+  font-size: 14px;
+}
+
+.button__click::after {
+  content: "";
+  display: block;
+  position: absolute;
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 1;
+  background: var(--acent-color, #000000);
+  inset: 0;
+}
+
+.button__click:hover::after {
+  transform: scaleX(1);
+}
+
+.button__click:focus {
+  box-shadow: 2px 2px 0 2px var(--acent-color, #000000);
+  outline: none;
 }
 
 .button__text {
-  font-size: 14px;
-  font-family: var(--acent_font, "PressStart2P-Regular", fantasy);
+  position: relative;
+  color: var(--botton_text-color, #ffff);
+  z-index: 2;
+  display: block;
+  mix-blend-mode: difference;
+}
+
+.footer_section {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.footer__button-img {
+  block-size: 22px;
+  inline-size: 22px;
+  position: relative;
+  color: var(--botton_text-color, #ffff);
+  z-index: 2;
+  display: block;
+  mix-blend-mode: difference;
 }
 
 .card__icon-button {
