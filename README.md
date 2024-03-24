@@ -1,5 +1,7 @@
-zakrivayuschiy-teg-f
-Ссылки:
+## Проект:zakrivayuschiy-teg-f
 
-Репозиторий проекта:
-Проект опубликованный в gh-pages:
+### **Репозиторий проекта: https://github.com/marinka-bobidi/zakrivayuschiy-teg-f.git**
+
+### **Публикация проекта: https://github.com/marinka-bobidi/zakrivayuschiy-teg-f.git**
+
+#### Выполнила: Филиппова М.Ю.
