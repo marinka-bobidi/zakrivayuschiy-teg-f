@@ -193,14 +193,20 @@
   align-items: stretch;
 }
 
+.card__icon-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
 .button__click {
   position: relative;
   cursor: pointer;
   padding: 10px 36px;
   transition: box-shadow 0.3s ease;
-  background-color: var(--background-color);
+  background-color: var(--background-color, #ffffff);
   border: 2px solid var(--acent-color, #000000);
-  color: var(--acent-color);
+  color: var(--acent-color, #000000);
   font-family: var(--acent_font, "PressStart2P-Regular", fantasy);
   font-size: 14px;
 }
@@ -259,8 +265,44 @@
   mix-blend-mode: difference;
 }
 
-.card__icon-button {
-  border: none;
-  background: transparent;
-  cursor: pointer;
+.dialog__window {
+  background-color: var(--background-color, #ffffff);
+  border: 2px solid var(--acent-color, #000000);
+  color: var(--acent-color, #000000);
+  display: grid;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--acent_font, "PressStart2P-Regular", fantasy);
+  font-size: 14px;
+  text-transform: uppercase;
+  max-inline-size: 343px;
+  line-height: 1.5;
+  padding: 25px 30px;
+}
+
+.dialog__content {
+  display: flex;
+  gap: 10px;
+  justify-self: center;
+  align-items: center;
+}
+
+.dialog__window::backdrop {
+  background-color: rgb(0 0 0 / 75%);
+}
+
+.dialog__img {
+  block-size: 39px;
+  inline-size: 39px;
+  color: var(--acent-color, #000000);
+  position: relative;
+}
+
+.dialog__button {
+  inline-size: 100%;
+}
+
+.dialog__window:not([open]) {
+  opacity: 0;
+  pointer-events: none;
 }
