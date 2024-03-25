@@ -161,8 +161,7 @@
     (-webkit-text-stroke: 1px var(--background-color, #ffffff))
 ) {
   .cards__img-label {
-    text-shadow: none;
-    -webkit-text-stroke: 1px var(--background-color, #ffffff);
+    -webkit-text-stroke: 1px var(--background-color, #1b1919);
   }
 }
 
