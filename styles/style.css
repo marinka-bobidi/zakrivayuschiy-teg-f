@@ -25,7 +25,6 @@
   background-size: cover;
   background-attachment: fixed;
   padding-block: 100px;
-  display: grid;
 }
 
 .header {
@@ -34,21 +33,20 @@
   font-family: var(--acent_font, "PressStart2P-Regular", fantasy);
   text-transform: uppercase;
   margin-block-end: 100px;
-  position: relative;
 }
 
 .page__cards {
   margin-inline: auto;
-  max-inline-size: 700px;
+  position: relative;
+  max-inline-size: 696px;
   border: 2px solid var(--acent-color, #000000);
   background-color: var(--background-color, #ffffff);
-  width: 100vw;
 }
 
 .header__decor {
-  margin-block-start: clamp(7.6rem, 7.2rem + 1.5vw, 8.6rem);
+  margin-block-start: clamp(7.6rem, 7.1rem + 1.5vw, 8.6rem);
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  margin-block-end: 20px;
+  margin-block-end: 30px;
 }
 
 .header__title {
@@ -63,6 +61,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-inline-start: 30px;
 }
 
 .theme-menu__button {
@@ -118,12 +117,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 60px;
-  padding-block-end: 100px;
+  padding-block-end: 50px;
 }
 
 .cards__list {
   display: grid;
+  gap: 50px;
 }
 
 .cards__list-item {
@@ -133,23 +132,22 @@
 .cards__list-title {
   font-size: 18px;
   font-variation-settings: "wght" var(--weight_title, 700);
-  line-height: normal;
   line-height: 21.78px;
   font-variation-settings: "slnt" 0;
-  padding-inline: 17px;
+  padding: 5px 10px;
 }
 
 .cards__content {
   display: grid;
-  gap: 25px;
-  padding: 25px;
+  gap: 20px;
+  padding: 30px 25px;
 }
 
 .cards__img-label {
   position: absolute;
   z-index: 1;
   inset-block-start: 25px;
-  inset-inline-end: 13px;
+  inset-inline-end: 25px;
   mix-blend-mode: hard-light;
   color: var(--acent-color, #000000);
   font-family: var(--acent_font, "PressStart2P-Regular", fantasy);
@@ -179,10 +177,13 @@
   object-fit: cover;
   object-position: center;
   position: relative;
+  inline-size: 694px;
+  block-size: 694px;
 }
 
 .cards__text {
   font-size: 18px;
+  font-weight: var(--weight_text, 400);
   line-height: 21px;
 }
 
@@ -277,7 +278,7 @@
   text-transform: uppercase;
   max-inline-size: 343px;
   line-height: 1.5;
-  padding: 25px 30px;
+  padding: 30px;
 }
 
 .dialog__content {
@@ -304,5 +305,33 @@
 
 .dialog__window:not([open]) {
   opacity: 0;
-  pointer-events: none;
+}
+
+.image__glass {
+  filter: sepia(120%) opacity(85%);
+}
+
+.image__relax {
+  filter: invert(35%) saturate(90%);
+}
+
+.image__reflex {
+  filter: grayscale(90%) brightness(0.4);
+}
+
+.image__bugs {
+  filter: brightness(2) sepia(20%) invert(15%);
+}
+
+.image__work {
+  filter: brightness(0.8) hue-rotate(20deg) invert(25%) saturate(60%)
+    contrast(150%);
+}
+
+.image__freands {
+  filter: contrast(50%) brightness(70%);
+}
+
+.image__cat {
+  filter: contrast(150%) sepia(20%);
 }

@@ -1,11 +1,13 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
+  /* Общие переменные  */
   --basic_font: "Inter-Variable", sans-serif;
   --acent_font: "PressStart2P-Regular", fantasy;
   --weight_title: 700;
   --weight_text: 400;
   --color_heart: #ff0000;
 
+  /* Переменные для свелой темы */
   --botton_text-color_light: #ffff;
   --background-color_light: #ffff;
   --acent-color_light: #000000;
@@ -19,6 +21,7 @@
   --sparks-color_light: #ff0000;
   --contur-color_light: var(--acent-color_light, #000000);
 
+  /* Переменные для темной темы */
   --background-color_dark: #000000;
   --acent-color_dark: #00cc14;
   --background-image_dark: repeating-linear-gradient(

@@ -20,7 +20,7 @@
 
   .core {
     fill: var(--background-color, #ffffff);
-    transition: fill 0.3s linear;
+    transition: fill 0.3s linear 0.03s;
   }
 
   .main-body {
@@ -40,7 +40,7 @@
   }
   .main-body {
     fill: var(--acent-color, #000000);
-    transition: fill 0.3s linear;
+    transition: fill 0.3s linear 0.05s;
   }
 }
 
@@ -60,13 +60,13 @@
 }
 
 .like-icon.is-liked {
-  .core {
-    fill: var(---color_heart, #ff0000);
-    transition: fill 0.3s linear 0.03s;
-  }
-
   .heart {
     animation: puls 0.3s ease-in 0.1s 1 alternate;
+  }
+
+  .core {
+    fill: var(--color_heart, #ff0000);
+    transition: fill 0.3s linear 0.03s;
   }
 
   .main-body {
