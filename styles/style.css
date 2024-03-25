@@ -21,7 +21,7 @@
   font-family: var(--basic_font, "Inter-Variable", sans-serif);
   background-color: var(--background-color, #ffffff);
   color: var(--acent-color, #000000);
-  background-image: var(--background-image, none);
+  background-image: var(--background-image, #ffffff);
   background-size: cover;
   background-attachment: fixed;
   padding-block: 100px;
@@ -269,7 +269,6 @@
   border: 2px solid var(--acent-color, #000000);
   color: var(--acent-color, #000000);
   display: grid;
-  justify-content: center;
   gap: 10px;
   font-family: var(--acent_font, "PressStart2P-Regular", fantasy);
   font-size: 14px;
@@ -277,17 +276,22 @@
   max-inline-size: 343px;
   line-height: 1.5;
   padding: 30px;
+  opacity: 1;
+}
+
+.dialog__window:not([open]) {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .dialog__content {
   display: flex;
   gap: 10px;
-  justify-self: center;
   align-items: center;
 }
 
 .dialog__window::backdrop {
-  background-color: rgb(0 0 0 / 75%);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .dialog__img {
@@ -299,10 +303,6 @@
 
 .dialog__button {
   inline-size: 100%;
-}
-
-.dialog__window:not([open]) {
-  opacity: 0;
 }
 
 .image__glass {
