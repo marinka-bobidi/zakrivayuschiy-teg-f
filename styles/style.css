@@ -133,7 +133,6 @@
   font-size: 18px;
   font-variation-settings: "wght" var(--weight_title, 700);
   line-height: 21.78px;
-  font-variation-settings: "slnt" 0;
   padding: 5px 10px;
 }
 
@@ -177,7 +176,6 @@
   object-fit: cover;
   object-position: center;
   position: relative;
-  inline-size: 694px;
   block-size: 694px;
 }
 
