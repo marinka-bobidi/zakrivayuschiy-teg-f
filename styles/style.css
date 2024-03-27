@@ -36,9 +36,9 @@
 }
 
 .page__cards {
+  max-inline-size: 700px;
   margin-inline: auto;
   position: relative;
-  max-inline-size: 696px;
   border: 2px solid var(--acent-color, #000000);
   background-color: var(--background-color, #ffffff);
 }
@@ -46,21 +46,23 @@
 .header__decor {
   margin-block-start: clamp(7.6rem, 7.1rem + 1.5vw, 8.6rem);
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  margin-block-end: 30px;
+  margin-block-end: 20px;
 }
 
 .header__title {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  font-weight: var(--weight_text, 400);
 }
 
 .theme__menu {
   margin-block: 25px;
+  margin-inline-start: -20px;
 }
 
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   margin-inline-start: 30px;
 }
 
@@ -118,6 +120,7 @@
   flex-direction: column;
   justify-content: center;
   padding-block-end: 50px;
+  gap: 50px;
 }
 
 .cards__list {
@@ -137,9 +140,18 @@
 }
 
 .cards__content {
-  display: grid;
+  /* display: grid;
   gap: 20px;
-  padding: 30px 25px;
+  padding: 20px 30px 0px 25px; */
+  display: grid;
+  gap: 25px;
+  padding: 20px 26px 20px 26px;
+}
+
+@media (width >= 1440px) {
+  .cards__content {
+    padding: 30px 20px 20px 30px;
+  }
 }
 
 .cards__img-label {
@@ -165,17 +177,14 @@
   }
 }
 
-.cards__list-img {
-  border-block: 2px solid var(--acent-color, #000000);
-}
-
 .cards__img {
   display: block;
   inline-size: 100%;
   object-fit: cover;
   object-position: center;
   position: relative;
-  block-size: 694px;
+  border-block: 2px solid var(--acent-color, #000000);
+  max-block-size: 696px;
 }
 
 .cards__text {
@@ -187,7 +196,6 @@
 .cards__button-content {
   display: flex;
   justify-content: end;
-  gap: 5px;
   align-items: stretch;
 }
 
@@ -195,6 +203,11 @@
   border: none;
   background: transparent;
   cursor: pointer;
+}
+
+.card__icon-button:focus-visible {
+  outline: none;
+  border: 2px solid var(--acent-color, #000000);
 }
 
 .button__click {
@@ -225,8 +238,8 @@
   transform: scaleX(1);
 }
 
-.button__click:focus {
-  box-shadow: 2px 2px 0 2px var(--acent-color, #000000);
+.button__click:focus-visible {
+  box-shadow: 2px 2px var(--acent-color, #000000);
   outline: none;
 }
 
@@ -238,7 +251,7 @@
   mix-blend-mode: difference;
 }
 
-.footer_section {
+.cards__list-footer {
   display: grid;
   justify-content: center;
   align-items: center;
@@ -253,6 +266,13 @@
   text-align: center;
 }
 
+@media (width <= 376px) {
+  .footer__button {
+    gap: 10px;
+    padding: 20px 20px;
+    flex-direction: column;
+  }
+}
 .footer__button-img {
   block-size: 22px;
   inline-size: 22px;
@@ -267,15 +287,15 @@
   background-color: var(--background-color, #ffffff);
   border: 2px solid var(--acent-color, #000000);
   color: var(--acent-color, #000000);
-  display: grid;
-  gap: 10px;
   font-family: var(--acent_font, "PressStart2P-Regular", fantasy);
   font-size: 14px;
   text-transform: uppercase;
-  max-inline-size: 343px;
   line-height: 1.5;
   padding: 30px;
-  opacity: 1;
+  max-inline-size: 343px;
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  gap: 30px;
 }
 
 .dialog__window:not([open]) {
@@ -284,9 +304,13 @@
 }
 
 .dialog__content {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+  gap: 30px;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+
+.button__dialog {
+  text-transform: uppercase;
 }
 
 .dialog__window::backdrop {
