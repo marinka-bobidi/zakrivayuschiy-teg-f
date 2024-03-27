@@ -56,14 +56,13 @@
 
 .theme__menu {
   margin-block: 25px;
-  margin-inline-start: -20px;
 }
 
 .theme-menu__list {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-inline-start: 30px;
+  padding-inline-start: 20px;
 }
 
 .theme-menu__button {
@@ -119,8 +118,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-block-end: 50px;
   gap: 50px;
+  padding-bottom: 50px;
 }
 
 .cards__list {
@@ -137,37 +136,40 @@
   font-variation-settings: "wght" var(--weight_title, 700);
   line-height: 21.78px;
   padding: 5px 10px;
+  border-bottom: 2px solid var(--acent-color, #000000);
 }
 
 .cards__content {
-  /* display: grid;
-  gap: 20px;
-  padding: 20px 30px 0px 25px; */
   display: grid;
   gap: 25px;
   padding: 20px 26px 20px 26px;
+  border-top: 2px solid var(--acent-color, #000000);
 }
 
 @media (width >= 1440px) {
   .cards__content {
-    padding: 30px 20px 20px 30px;
+    padding: 25px 20px 25px 30px;
   }
 }
 
 .cards__img-label {
   position: absolute;
   z-index: 1;
-  inset-block-start: 25px;
-  inset-inline-end: 25px;
   mix-blend-mode: hard-light;
   color: var(--acent-color, #000000);
   font-family: var(--acent_font, "PressStart2P-Regular", fantasy);
   font-size: 14px;
-  text-transform: uppercase;
   opacity: 0.5;
   text-shadow: 0 0 1px var(--background-color, #ffffff);
+  inset-block-start: 2.8vh;
+  inset-inline-end: 2.8vw;
 }
 
+@media (width >= 376px) {
+  .cards__img-label {
+    inset-inline-end: 1.5vw;
+  }
+}
 @supports (
   (text-stroke: 1px var(--background-color, #ffffff)) or
     (-webkit-text-stroke: 1px var(--background-color, #ffffff))
@@ -183,7 +185,6 @@
   object-fit: cover;
   object-position: center;
   position: relative;
-  border-block: 2px solid var(--acent-color, #000000);
   max-block-size: 696px;
 }
 
@@ -210,9 +211,16 @@
   border: 2px solid var(--acent-color, #000000);
 }
 
+.card__like-button {
+  max-inline-size: 130px;
+}
+
 .button__click {
   position: relative;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px 36px;
   transition: box-shadow 0.3s ease;
   background-color: var(--background-color, #ffffff);
@@ -268,19 +276,25 @@
 
 @media (width <= 376px) {
   .footer__button {
-    gap: 10px;
-    padding: 20px 20px;
+    padding-block: 17px;
     flex-direction: column;
   }
 }
 .footer__button-img {
-  block-size: 22px;
-  inline-size: 22px;
+  block-size: 21px;
+  inline-size: 21px;
   position: relative;
   color: var(--botton_text-color, #ffff);
   z-index: 2;
   display: block;
   mix-blend-mode: difference;
+}
+
+@media (width <= 376px) {
+  .footer__button-img {
+    block-size: 28px;
+    inline-size: 28px;
+  }
 }
 
 .dialog__window {

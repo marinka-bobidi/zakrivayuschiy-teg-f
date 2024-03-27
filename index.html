@@ -184,7 +184,7 @@
           <article class="cards__list-content">
             <h2 class="cards__list-title">1 спринт: А если не получится?</h2>
             <div class="cards__img">
-              <span class="cards__img-label"> &lt;/HTML&gt; </span>
+              <span class="cards__img-label"> &lt;CSS&gt; </span>
               <img
                 class="cards__img image__relax"
                 src="./images/relax.png"
@@ -247,7 +247,7 @@
           <article class="cards__list-content">
             <h2 class="cards__list-title">2 спринт: Погоня за идеалом</h2>
             <div class="cards__img">
-              <span class="cards__img-label"> &lt;/HTML&gt; </span>
+              <span class="cards__img-label"> &lt;desigions&gt; </span>
               <img
                 class="cards__img image__reflex"
                 src="./images/reflex.png"
@@ -313,7 +313,7 @@
           <article class="cards__list-content">
             <h2 class="cards__list-title">2 спринт: О тех, кто рядом</h2>
             <div class="cards__img">
-              <span class="cards__img-label"> &lt;/HTML&gt; </span>
+              <span class="cards__img-label">care</span>
               <img
                 class="cards__img image__bugs"
                 src="./images/i_and_bugs.png"
@@ -379,7 +379,7 @@
           <article class="cards__list-content">
             <h2 class="cards__list-title">3 спринт: Обходные стратегии</h2>
             <div class="cards__img">
-              <span class="cards__img-label"> &lt;/HTML&gt; </span>
+              <span class="cards__img-label"> &lt;support&gt; </span>
               <img
                 class="cards__img image__work"
                 src="./images/hard_work.png"
@@ -443,7 +443,7 @@
           <article class="cards__list-content">
             <h2 class="cards__list-title">3 спринт: Когда опускаются руки</h2>
             <div class="cards__img">
-              <span class="cards__img-label"> &lt;/HTML&gt; </span>
+              <span class="cards__img-label"> &lt;lifes-style: none;&gt; </span>
               <img
                 class="cards__img image__freands"
                 src="./images/frends.png"
@@ -509,7 +509,7 @@
           <article class="cards__list-content">
             <h2 class="cards__list-title">«Сейчас я здесь»</h2>
             <div class="cards__img">
-              <span class="cards__img-label"> &lt;/HTML&gt; </span>
+              <span class="cards__img-label"> &lt;experience&gt; </span>
               <img
                 class="cards__img image__cat"
                 src="./images/cat_glasses.png"
@@ -573,38 +573,37 @@
           </article>
         </li>
       </ul>
-      <div class="cards__list-footer">
-        <button
-          class="footer__button button__click"
-          type="button"
-          onclick="getElementById('dialog').showModal();"
-          aria-controls="dialog"
-        >
-          <svg class="footer__button-img" viewBox="0 0 39 39">
-            <use href="svg/floppy.svg#floppy" />
-          </svg>
-          <span class="button__text">Сохранить на&nbsp;память</span>
-        </button>
-      </div>
     </main>
-
-    <dialog class="dialog__window" id="dialog">
-      <div class="dialog__content">
-        <svg class="dialog__img" viewBox="0 0 39 39">
+    <div class="cards__list-footer">
+      <button
+        class="footer__button button__click"
+        type="button"
+        onclick="window['dialog'].showModal();"
+        aria-controls="dialog"
+      >
+        <svg class="footer__button-img" viewBox="0 0 39 39">
           <use href="svg/floppy.svg#floppy" />
         </svg>
-        <p>Вставьте дискету, чтобы продолжить</p>
-      </div>
-      <form method="dialog">
-        <button
-          class="dialog__button button__click"
-          type="submit"
-          onclick="getElementById('dialog').close();"
-        >
-          <span class="button__text button__dialog">ок</span>
-        </button>
-      </form>
-    </dialog>
+        <span class="button__text">Сохранить на&nbsp;память</span>
+      </button>
+      <dialog class="dialog__window" id="dialog">
+        <div class="dialog__content">
+          <svg class="dialog__img" viewBox="0 0 39 39">
+            <use href="svg/floppy.svg#floppy" />
+          </svg>
+          <p>Вставьте дискету, чтобы продолжить</p>
+        </div>
+        <form method="dialog">
+          <button
+            class="dialog__button button__click"
+            type="submit"
+            onclick="window['dialog'].close()"
+          >
+            <span class="button__text button__dialog">ок</span>
+          </button>
+        </form>
+      </dialog>
+    </div>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
